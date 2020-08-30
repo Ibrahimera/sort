@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorting with javascript</title>
+</head>
+<body>
+ <div>
+ 	<main><h2>Sort this array in Accending order</h2></main>
+ 	<div><strong>Array:</strong><h3>[1,-48,-23,9,0,21,2,3]<h3></div>
+ 	<div><strong>Sorted Array: </strong><h3 id="sorted"></h3></div>
+ </div>
+ <script>
+ 	let shouldsort=[1,-48,-23,9,0,21,2,3];
+ 	
+ 	
+ 	function mySort(s){
+ 		let sorted=[];
+ 		let u,g,i=0;
+ 		while(s.length>0){
+ 		u=0;
+ 		g=false;
+ 		while(u<s.length){
+ 		if(s[i]>s[u]){
+ 			u=s.length;
+ 			g=true;
+ 		}
+ 		u++;
+ 	  }
+ 	  if(!g){sorted.push(s[i]);s.splice(i,1);i--}
+ 	  i++;
+ 	  i < s.length ? "" :i=0;
+
+ 	}
+ 	return sorted;
+ 	}
+   document.getElementById('sorted').innerHTML=mySort(shouldsort);
+
+ </script>
+</body>
+</html>
